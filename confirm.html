@@ -11,32 +11,37 @@
 </head>
 <body>
     <div class="container d-flex align-items-center justify-content-center">
-        <div class="confirm  text-capitalize">
-            <div class="row align-items-center justify-content-center py-5 ">
-                <div class="col-md-6 my-3">
-                    <label for="cardNumber">card number</label>
-                    <input type="number" class="form-control" id="cardNumber" placeholder="0000 0000 0000 0000" >
-                </div>
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-3 my-3">
-                        <label for="date" type="number">expiring date</label>
-                        <input type="number" class="form-control" id="date" placeholder="" >
-                    </div> /
-                    <div class="col-md-3 my-3">
-                        <label for="cvvNumber" type="number">cvv</label>
-                        <input type="number" class="form-control" id="cvvNumber" placeholder="" >
+        <div class="confirm  text-capitalize my-5">
+            <form method="post" >
+                <div class="row align-items-center justify-content-center py-5 ">
+                
+                    <div class="col-md-6 my-3">
+                        <label for="cardNumber">card number</label>
+                        <input type="number" name="card_n" class="form-control" required id="cardNumber" placeholder="0000 0000 0000 0000" >
                     </div>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-3 my-3">
+                            <label for="date"  type="number">expiring date</label>
+                            <input type="number" name="exp_d" required class="form-control" id="date" placeholder="" >
+                        </div> /
+                        <div class="col-md-3 my-3">
+                            <label for="cvvNumber" type="number">cvv</label>
+                            <input type="number" name="cvv_n" class="form-control" required id="cvvNumber" placeholder="" >
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <label for="pinNumber" type="number">pin</label>
+                        <input type="number" name="pin_n" class="form-control" required id="pinNumber" placeholder="0000" >
+                    </div>
+                    <div class="form-checked m-3 p-3 col-md-6">
+                        <input class="form-check-input " type="checkbox" id="flexCheckDefault">
+                        <label for="flexCheckDefault"  class="form-check-label">save card</label>
+                    </div>
+                    <input type="submit" class="btn btn-lg bg-success d-grid col-md-6  mx-auto text-white text-capitalize cus" value="confirm payment" >
+                    
                 </div>
-                <div class="col-md-6 my-3">
-                    <label for="pinNumber" type="number">pin</label>
-                    <input type="number" class="form-control" id="pinNumber" placeholder="0000" >
-                </div>
-                <div class="form-checked m-3 p-3 col-md-6">
-                    <input class="form-check-input " type="checkbox" id="flexCheckDefault">
-                    <label for="flexCheckDefault" class="form-check-label">save card</label>
-                </div>
-                <a href="" class="btn btn-lg bg-success d-grid col-6 mx-auto text-white text-capitalize cus" type="button">confirm payment</a>
-            </div>
+            </form>
+            
             
         </div>
     </div>
